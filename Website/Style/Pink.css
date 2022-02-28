@@ -1,0 +1,334 @@
+* This is where our menu items and our logo are */
+.headcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #000000, #661aff, #000000);
+}
+
+/* Style for ChocoApples */
+.logo {
+  margin: 0 0 0 .45em;
+}
+
+.logo a {
+  background: -webkit-linear-gradient(black, #80ffff, #0066ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo, .navigation {
+  list-style: none;
+}
+
+.logo a, .navigation a {
+  text-decoration: none;
+}
+
+/* Style for our menu items */
+.navigation {
+  display: flex;
+}
+
+.navigation a {
+  display: block;
+  padding: 1em;
+  color: #00ffff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.navigation a:hover {
+  background: aquamarine;
+  color: #000000;
+}
+
+/* Tablet layout. */
+@media all and (max-width: 990px) {
+  .headcontainer {
+    flex-direction: column;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .navigation {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+
+/* Mobile device layout */
+@media all and (max-width: 600px) {
+  .logo {
+    margin: .25em 0;
+    align-self: left;
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: linear-gradient(to right, #000000, #99e6ff);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #d9b3ff;
+  border-radius: 20px;
+  border: 3px solid black;
+}
+
+/* Container for the blog portion of the page */
+.banner {
+  display: flex;
+  background: linear-gradient(to left, #330066, #9198e5, #330066);
+  color: white;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.banner i:hover {
+  color: #00ffff;
+}
+
+@media screen and (max-width: 575px) {
+  .banner {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .banner i {
+    padding-top: 20px;
+    padding-left: 40px;
+  }
+}
+
+.banner h1 {
+  color: #cceeff;
+  padding-top: 10px;
+}
+
+.anime {
+  display: grid;
+  grid-template-columns: 0.8fr 2.4fr;
+  grid-template-rows: 2.3fr 0.2fr;
+  gap: 0px 0px;
+  grid-auto-flow: row dense;
+  grid-template-areas:
+    "updated-post blogging"
+    "myfooter myfooter";
+}
+
+/* For Tablet & Phone View */
+@media (max-width: 700px) {
+  .anime {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.1fr;
+    grid-template-areas:
+      "updated-post"
+      "blogging"
+      "myfooter";
+  }
+}
+
+.blogging {
+  grid-area: blogging;
+  background-color: #ffe6ff;
+  padding-bottom: 20px;
+}
+
+/* Heading style for the blog */
+.bloghead {
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: normal;
+  color: purple;
+  padding-left: 10px;
+  padding-top: 20px;
+  font-size: 40px;
+}
+
+.bloghead2 {
+  color: purple;
+  font-family: 'Oswald', sans-serif;
+  padding-left: 10px;
+  padding-top: 20px;
+  font-size: 25px;
+}
+
+.bloghead3 {
+  font-family: 'Abril Fatface', cursive;
+  color: purple;
+  padding-left: 10px;
+  padding-top: 20px;
+}
+
+/* Style for the date written */
+.blogdate {
+  color: black;
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+/* Style for the blog paragraphs */
+.blogpar {
+  font-family: 'Concert One', cursive;
+  color: #260033;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+/* Style for the blog paragraphs */
+.blogpar2 {
+  font-family: 'Concert One', cursive;
+  color: #260033;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+
+/* Where you'll see the social media links and updated posts */
+.updated-post {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "."
+    ".";
+  grid-area: updated-post;
+  background-color: #d9b3ff;
+  color: white;
+}
+
+/* This is my avatar image */
+.updated-post img {
+  border-radius: 50%;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* This is the About Me Section */
+.name {
+  font-family: 'Caveat', cursive;
+  font-weight: bolder;
+  text-align: center;
+  color: purple;
+  font-size: 40px;
+  padding-top: 20px;
+}
+
+.work {
+  color: #e6ffff;
+  font-size: 24px;
+  text-align: center;
+}
+
+.school {
+  color: blue;
+  font-size: 20px;
+  text-align: center;
+}
+
+.aboutme {
+  font-family: 'Satisfy', cursive;
+  color: #330066;
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.updated-post a {
+  padding-top: 10px;
+  text-decoration: none;
+  text-align: center;
+  color: #ff33cc;
+  font-weight: bold;
+}
+
+.updated-post li {
+  list-style-type: none;
+}
+
+/* Social media buttons */
+.buttoncontainer {
+  display: block;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.button2 {
+  background-image: linear-gradient(#b3e6ff, #ffffcc);
+  border-radius: 12px;
+  padding: 10px;
+  text-decoration: none;
+  margin: 10px 5px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.button2:hover {
+  background-image: linear-gradient(#b3e6ff, #ccffeb);
+
+}
+
+/* Last Paragraph in blog */
+.paragraph3 {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+figcaption {
+  text-align: center;
+  color: #260033;
+}
+
+blockquote {
+  color:#260033;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.myfooter {
+  grid-area: myfooter;
+  background-image: linear-gradient(to right, #ffb3ff, #b30047, #ffb3ff);
+  color: black;
+  font-size: 10px;
+  text-align: right;
+  padding-left: 20px;
+}

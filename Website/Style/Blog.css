@@ -1,0 +1,288 @@
+/* This is where our menu items and our logo are */
+.headcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #000000, #661aff);
+}
+
+/* Style for ChocoApples */
+.logo {
+  margin: 0 0 0 .45em;
+}
+
+.logo a {
+  background: -webkit-linear-gradient(black, #80ffff, #0066ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo, .navigation {
+  list-style: none;
+}
+
+.logo a, .navigation a {
+  text-decoration: none;
+}
+
+/* Style for our menu items */
+.navigation {
+  display: flex;
+}
+
+.navigation a {
+  display: block;
+  padding: 1em;
+  color: #00ffff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.navigation a:hover {
+  background: aquamarine;
+  color: #000000;
+}
+
+/* Tablet layout. */
+@media all and (max-width: 990px) {
+  .headcontainer {
+    flex-direction: column;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .navigation {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+
+/* Mobile device layout */
+@media all and (max-width: 600px) {
+  .logo {
+    margin: .25em 0;
+    align-self: left;
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: linear-gradient(to right, #000000, #99e6ff);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #d9b3ff;
+  border-radius: 20px;
+  border: 3px solid black;
+}
+
+/* Start of my tutorial */
+.hero-image {
+  background-image: url(../Images/Sword.jpg);
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* This is where our subscribe button is located. */
+.subscribe {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: #5900b3;
+}
+
+@media (max-width: 700px) {
+  .subscribe {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .subscribe h1 {
+    text-align: center;
+    padding-top: 10px;
+    color: #ffffe6;
+  }
+}
+
+
+.subscribe h1 {
+  color: #ff66ff;
+  font-weight: bolder;
+  font-family: 'Alfa Slab One', cursive;
+}
+
+/* This is our search icon */
+i {
+  padding-right: 40px;
+  color: #80ff80;
+}
+
+i:hover {
+  color: #ffffb3;
+}
+
+/* This is for our Subscribe button */
+.button {
+  background-color: #00ffff;
+  border-radius: 12px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px gray;
+  padding: 5px;
+}
+
+.button a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+  font-family: 'Handlee', cursive;
+}
+
+.button:hover {
+  background-color: greenyellow;
+}
+
+/* Links to my blog and the card display */
+.card {
+  --card-gradient: rgba(0, 0, 0, 0.8);
+  --card-gradient: #5e9ad9, #e271ad;
+  --card-gradient: #00ffff, #ffccff;
+  --card-blend-mode: overlay;
+  --card-blend-mode: multiply;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
+  padding-bottom: 1rem;
+  background-image: linear-gradient(var(--card-gradient),
+      #4dd2ff, #bf80ff, #99e6ff max(9.5rem, 27vh));
+  overflow: hidden;
+}
+
+/* This will control the img on the card */
+.card img {
+  border-radius: 0.5rem 0.5rem 0 0;
+  width: 100%;
+  object-fit: cover;
+  height: max(10rem, 25vh);
+  max-height: max(10rem, 30vh);
+  mix-blend-mode: var(--card-blend-mode);
+  filter: grayscale(100);
+}
+
+/* This is what colors are shown when hovering on the cards. */
+:hover,
+:focus-within {
+  --card-gradient: #24a9d5, #80ffe5, #ffffb3;
+}
+
+/* This is the grid where our cards are */
+.blogcards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-content: center;
+  justify-items: center;
+  margin: 0;
+  padding: 1rem;
+  font-family: arial, sans-serif;
+  color: #444;
+  background-color: black;
+}
+
+/* Tablet layout. */
+@media all and (max-width: 990px) {
+  .blogpage {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+  }
+}
+
+
+.card h2 {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+.card a {
+  padding-left: 10px;
+  text-decoration: none;
+  color: #7a00cc;
+  font-family: 'Archivo Narrow', sans-serif;
+}
+
+.card a:hover {
+  color: #99004d;
+}
+
+.card h2 {
+  padding-left: 10px;
+  color: #800040;
+  font-family: 'Archivo Narrow', sans-serif;
+}
+
+.dates {
+  padding-left: 10px;
+  color: black;
+  font-size: 10px;
+}
+
+.card p {
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.card-wrapper {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+  grid-gap: 1.5rem;
+  max-width: 100vw;
+  width: 120ch;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* This is where our Copyright is located */
+.footer {
+  display: flex;
+  background-image: linear-gradient(to right, #ffb3ff, #b30047, #ffb3ff);
+  color: black;
+  font-size: 10px;
+  text-align: right;
+  padding-left: 20px;
+}

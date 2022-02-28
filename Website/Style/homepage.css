@@ -1,0 +1,178 @@
+html, body {
+   height: 100%;
+   background-color: #000000;
+
+ }
+
+ /* This is where our menu items and our logo are */
+ .headcontainer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background: linear-gradient(to right, #000000, #661aff);
+   height: auto;
+ }
+
+ /* Style for ChocoApples */
+ .logo {
+   margin: 0 0 0 .45em;
+ }
+
+ .logo a {
+   background: -webkit-linear-gradient(black, #80ffff, #0066ff);
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+ }
+
+ .logo, .navigation {
+   list-style: none;
+ }
+
+ .logo a, .navigation a {
+   text-decoration: none;
+ }
+
+ /* Style for our menu items */
+ .navigation {
+   display: flex;
+ }
+
+ .navigation a {
+   display: block;
+   padding: 1em;
+   color: #00ffff;
+   text-transform: uppercase;
+   font-weight: bold;
+ }
+
+ .navigation a:hover {
+   background: aquamarine;
+   color: #000000;
+ }
+
+ /* Our entire grid */
+ #container {
+   width: 100%;
+   height: 100vh;
+   display: grid;
+   grid-template-rows: 80px 1fr;
+   grid-template-columns: 0.5fr 1fr;
+ }
+
+ /* For mobile devices */
+ @media screen and (min-device-width: 400px) and (max-device-width: 768px) {
+   header {
+     grid-template-columns: 1fr;
+   }
+ }
+
+ * {
+   padding: 0px;
+   margin: 0;
+ }
+
+ /* The center of the page, where you will find the main content. */
+ main {
+   grid-row: 1 / 3;
+   grid-column: 1/ 3;
+   background-image: linear-gradient(to right, #000000, #2929a3);
+   color: white;
+   text-align: center;
+ }
+
+ /* This controls the gradient animated background for the main content page. */
+ .css-selector {
+   background: linear-gradient(269deg, #010d0a, #01255c, #01070f);
+   background-size: 600% 600%;
+
+   -webkit-animation: BadApple 18s ease infinite;
+   -moz-animation: BadApple 18s ease infinite;
+   animation: BadApple 18s ease infinite;
+ }
+
+ @-webkit-keyframes BadApple {
+   0% {
+     background-position: 0% 51%
+   }
+
+   50% {
+     background-position: 100% 50%
+   }
+
+   100% {
+     background-position: 0% 51%
+   }
+ }
+
+ @-moz-keyframes BadApple {
+   0% {
+     background-position: 0% 51%
+   }
+
+   50% {
+     background-position: 100% 50%
+   }
+
+   100% {
+     background-position: 0% 51%
+   }
+ }
+
+ @keyframes BadApple {
+   0% {
+     background-position: 0% 51%
+   }
+
+   50% {
+     background-position: 100% 50%
+   }
+
+   100% {
+     background-position: 0% 51%
+   }
+ }
+
+ /* This is the font style that is displayed on the main content page. */
+ #mfont {
+   padding-top: 250px;
+   text-align: center;
+   font-size: 50px;
+   letter-spacing: 2px;
+   background-image: -webkit-linear-gradient(92deg, pink, yellow);
+   background-clip: padding-box;
+   animation: infinite;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   -webkit-animation: hue 10s infinite linear;
+ }
+
+ @keyframes hue {
+   from {
+     -webkit-filter: hue-rotate(0deg);
+   }
+
+   to {
+     -webkit-filter: hue-rotate(-360deg);
+   }
+ }
+
+
+ #welcome {
+   padding-top: 20px;
+ }
+
+ footer {
+   grid-column: 1 / 3;
+   grid-row: 3 / 4;
+   background: linear-gradient(to right, #000000, #e66465);
+   color: black;
+ }
+
+ /* This is the Copyright font located on the footer */
+ #last {
+   font-size: 10px;
+   text-align: right;
+   padding-top: 10px;
+   padding-right: 20px;
+ }
